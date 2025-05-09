@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.origen.label }} {{ form.origen() }}
+        </div>
+        <div>
+            {{ form.destino.label }} {{ form.destino() }}
+        </div>
+        <div>
+            {{ form.fecha_salida.label }} {{ form.fecha_salida() }}
+        </div>
+        <div>
+            {{ form.pasajeros.label }} {{ form.pasajeros() }}
+        </div>
+        {{ form.buscar() }}
+    </form>
+{% endblock %}
